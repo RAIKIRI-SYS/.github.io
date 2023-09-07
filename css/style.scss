@@ -1,0 +1,209 @@
+
+
+//IMPORT//
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url(nullsyle.css);
+
+
+
+//STYLES//
+
+body{
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    background-color: #312f30;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+//POWERS//
+
+$white: #FFFFFF;
+
+$orange: #F6762C;
+
+$gray: #312F30;
+
+
+//HEADER//
+
+
+.header {
+
+    background: url(../img/IGrzIxlfue\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    @media(max-width:920px){
+        &:last-child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+
+    &__nav {
+        color: rgb(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+
+    &__burger{
+        display: none;
+        width: 60px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+
+        span{
+          left: 0;
+          position: absolute;
+          background-color: #fff;
+          height: 3px;
+          width: 100%;
+          top: 25px;  
+        }
+        &::before{
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: $white;
+            position: absolute;
+            
+        }
+        &::after{
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: $white;
+            position: absolute;
+            bottom: 0;
+            
+        }
+
+        @media (max-width:920px){
+            display: block;
+        }
+    }
+
+
+    &__menu {
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        a{
+            padding: 30px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .active{
+            color: $white;
+            pointer-events: none;
+        }
+
+        a:hover{
+            color: $orange;
+        }
+        @media (max-width:920px){
+            display: none;
+        }
+    }
+
+    
+
+
+    &__info {
+        color: $white;
+        max-width: 557px;
+        margin: 186px 0px 222px 0px;
+
+        @media(max-width: 600px){
+            max-width: 320px;
+        }
+
+    }
+}
+
+.button {
+        
+    font-size: 16px;
+    text-decoration: none;
+    color: $white;
+    border-radius: 5px;
+    background: #F6762C;
+    padding: 18px 40px 18px 40px;
+    transition: all 0.3s ease;
+    &:hover{
+        color: #F6762C;
+        background-color: #fff;
+
+    }
+
+}
+.header-subtitle {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    font-weight: 500;
+    padding: 8px;
+    @media (max-width:920px){
+        text-align: center;
+    }
+    
+}
+.header-title {
+    font-size: 57.33px;
+    padding: 0 0 38px 0;
+    @media (max-width:920px){
+        text-align: center;
+    }
+    @media(max-width: 600px){
+        font-size: 45px;
+    }
+}
+.header-untitle {
+    font-size: 18px;
+    padding: 0 0 60px 0;
+    @media (max-width:920px){
+        text-align: center;
+    }
+    @media(max-width: 600px){
+        display: none;
+    }
+}
+
+.header__button{
+    @media(max-width:920px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.nav__button{
+    @media(max-width:920px){
+        display: none;
+    }
+}
+
+
